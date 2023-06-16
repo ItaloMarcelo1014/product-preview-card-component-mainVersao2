@@ -1,0 +1,285 @@
+/*=================RESET-CSS====================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-lue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+body{
+    font-size: 14px;
+    background-color: pink;
+    
+}
+
+
+button{
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Fraunces', serif;
+}
+
+h4{
+    margin-top: 5px;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 5px;
+}
+
+p h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.2em;
+}
+
+p{
+    font-size: 16px;
+    color: var(--Dark-grayish-blue);
+}
+
+h5{
+    font-family: 'Fraunces', serif;
+}
+/*==========CONTAINER============*/
+
+
+
+.container {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/*=========ARTICLE==========*/
+
+
+
+article{
+    max-width: 345px;
+    min-height: 590px;
+    /* From https://css.glass */
+    background: rgba(231, 218, 218, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(231, 218, 218, 0.3);
+    border-radius: 10px;
+    position: fixed;
+    top: 6%;
+    left: 15%;
+}
+
+/*========Animação======*/
+
+article{
+    transition: all 3s;
+    cursor: pointer;
+}
+
+article:hover{
+    -webkit-transform: rotateY(180deg);
+    transform:rotateY(-360deg);
+}
+
+/*==========CARD LEFT-TOP-IMG && IMAGEM============*/
+
+
+
+
+.imagem .mob{
+    background-image: url(/images/image-product-mobile.jpg);
+    background-size: 100%;
+    width: 345px;
+    height: 241px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.imagem .desk{
+   display: none;
+}
+
+
+/*==LINE===*/
+
+.line{
+    display: none;
+}
+
+/*=======INFO-RIGHT-BOTTOM-INFO========*/
+
+
+
+.info{
+    width: 345px;
+    height: 250px;
+    padding-left: 25px;
+    padding-top: 18px;
+}
+
+h4 .Perfume{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h2{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h5{
+    margin-top: 14px;
+}
+
+ #bigger {
+    font-size: 3em;
+    color: var(--Dark-cyan);
+}
+
+
+h5 .small {
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    font-size: 1em;
+    position: relative;
+    bottom: 8px;
+    left: 12px;
+}
+
+
+/*======PRICE-BUTTON=======*/
+
+button {
+    width: 300px;
+    height: 50px;
+    margin-top: 32px;
+    margin-left: 18px;
+    background-color: var(--Dark-cyan);
+    color: #fff;
+}
+
+button:hover{
+    background-color: #1a4031;
+}
+
+button i {
+    color: #fff;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    .container article {
+        top: 5%;
+        left: 32%;
+    }
+
+
+}
+
+@media screen and (min-width: 1440px) {
+    
+
+/*==========CONTAINER============*/
+
+.container article {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    position: fixed;
+    top: 24%;
+    left: 28%;
+    border-radius: 10px;
+}
+
+/*=========ARTICLE==========*/
+
+article{
+    min-width: 602px;
+    min-height: 452px;
+}
+
+
+
+/*==========CARD LEFT-TOP-IMG && IMAGEM============*/
+
+
+
+
+
+.imagem .mob {
+    display: none;
+}
+
+
+
+.imagem .desk{
+    display: block;
+    background-image: url(/images/image-product-desktop.jpg);
+    max-width: 304px;
+    min-height: 456px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    min-width: 304px;
+    height: 456px;
+}
+
+/*=====INFO=======*/
+
+.info{
+    padding-left: 25px;
+    padding-top: 30px;
+}
+
+/*========NEW-LINE=======*/
+
+.new-line{
+    display: none;
+}
+
+/*===========LINE=============*/
+.line{
+    display: flex;
+}
+
+/*======PRICE-BUTTON=======*/
+
+button {
+    width: 236px;
+    height: 50px;
+    margin-top: 120px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    background-color: var(--Dark-cyan);
+    color: #fff;
+}
+
+p{
+    padding: 12px;
+    margin-bottom: 5px;
+}
+
+h5{
+    margin-left: 4px;
+}
+}
